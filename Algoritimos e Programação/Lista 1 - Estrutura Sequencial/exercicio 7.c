@@ -18,9 +18,9 @@ int main()
     printf("Informe o valor para Y: ");
     scanf("%d", &y);
 
-    a = ((x + y) / y) * (x * x);
-    b = (x + y) / (x - y);
-    c = ((x * x) + (y * y)) / 2;
+    a = ((x + y) / y) * (x * x); // corrigir
+    b = (x + y) / (x - y);       // corrigir
+    c = ((x * x) + (y * y)) / 2; // corrigir
     d = (x * x * x) / (x * x);
     restDiv1 = x % y;
     restDiv2 = x % 3;
