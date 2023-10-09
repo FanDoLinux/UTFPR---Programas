@@ -12,8 +12,8 @@ int main()
 
     while (alturaB <= alturaA)
     {
-        alturaA += 0.02;
-        alturaB += 0.03;
+        alturaA = alturaA + 0.02;
+        alturaB = alturaB + 0.03;
         anos++;
     }
     printf("Altura final da arvore A = %.2f\n", alturaA);
