@@ -19,12 +19,15 @@ int main()
     do
     {
 
-        for (j = 1; j <= qtde; j++)
+        for (j = 0; j <= qtde; j++)
 
         {
-            mult = i * qtde;
-            contIng++;
-            printf("R$ %.2f\t        R$ %.2f\n", i, mult);
+            if (i >= 15 && i <= 20)
+            {
+                mult = i * qtde;
+                contIng++;
+                printf("R$ %.2f\t        R$ %.2f\n", i, mult);
+            }
             i = i + 0.5;
         }
 

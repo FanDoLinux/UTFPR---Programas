@@ -10,6 +10,37 @@ número digitado é ou não abundante.
 
 int main()
 {
+    int num, i, cont = 0, soma = 0;
+
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+
+    printf("\nDivisores:\n");
+
+    do
+    {
+        for (i = 1; i <= num; i++)
+        {
+            if (num % i == 0 && num != i)
+            {
+                printf("%d\n", i);
+                soma = soma + i;
+            }
+            cont++;
+        }
+
+    } while (cont < num);
+
+    printf("----\n%d\n", soma);
+
+    if (soma > num)
+    {
+        printf("\n%d eh abundante porque a soma dos divisores eh maior que %d", num, num);
+    }
+    else
+    {
+        printf("\n%d nao eh abundante porque a soma dos divisores eh menor que %d", num, num);
+    }
 
     return 0;
 }

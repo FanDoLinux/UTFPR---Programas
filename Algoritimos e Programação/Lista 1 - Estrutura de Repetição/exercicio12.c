@@ -19,13 +19,11 @@ int main()
             {
                 printf("\n");
             }
-            if (i % 3 && i % 5)
-            /*nao faz muito sentido fazer dos que sao divisiveis por 5 pois eles ja estao excluidos do intervalo,
-            mas como pede no exercicio fiz igual*/
-            {
-                cont++;
-                soma = soma + i;
-            }
+        }
+        if (i % 3 == 0 && i % 5 == 0)
+        {
+            cont++;
+            soma = soma + i;
         }
     }
     media = (float)soma / cont;
