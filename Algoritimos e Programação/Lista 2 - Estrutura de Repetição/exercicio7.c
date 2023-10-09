@@ -6,7 +6,7 @@ potência.*/
 
 int main()
 {
-    int base, expoente, resultado = 1;
+    int base, expoente, i, resultado = 1;
 
     printf("Informe o valor da base: ");
     scanf("%d", &base);
@@ -14,7 +14,7 @@ int main()
     scanf("%d", &expoente);
 
     printf("%d", base);
-    for (int i = 1; i < expoente; ++i)
+    for (i = 1; i < expoente; ++i)
     {
         resultado = resultado * base;
         printf(" * %d", base);

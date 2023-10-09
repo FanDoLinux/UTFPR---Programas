@@ -37,9 +37,11 @@ int main()
         }
     }
 
-    media = (float)soma / contI;
-
-    printf("\nA media dos numeros impares que sao divisiveis por 35 eh: %.2f", media);
+    if (contI > 0)
+    {
+        media = (float)soma / contI;
+        printf("\nA media dos numeros impares que sao divisiveis por 35 eh: %.2f", media);
+    }
 
     return 0;
 }

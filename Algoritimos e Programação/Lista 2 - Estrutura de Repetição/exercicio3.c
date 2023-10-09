@@ -18,7 +18,6 @@ int main()
     }
     printf("Altura final da arvore A = %.2f\n", alturaA);
     printf("Altura final da arvore B = %.2f\n", alturaB);
-
     printf("\nSerao necessarios %d anos para que a arvore B seja maior que a arvore A.", anos);
 
     return 0;

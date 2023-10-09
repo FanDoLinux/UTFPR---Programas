@@ -63,23 +63,21 @@ int main()
             {
             case 'B':
                 contB++;
+                if (cursoS == 'N')
+                {
+                    somaIdade = somaIdade + idade;
+                    contBSC++;
+                }
                 break;
 
             default:
                 contE++;
+                if (trava == 0 && cursoS == 'S')
+                {
+                    menor = idade;
+                    trava = 1;
+                }
                 break;
-            }
-
-            if (trava == 0 && nacio == 'E' && cursoS == 'S')
-            {
-                menor = idade;
-                trava = 1;
-            }
-
-            if (nacio == 'B' && cursoS == 'N')
-            {
-                somaIdade = somaIdade + idade;
-                contBSC++;
             }
 
             if (nacio == 'E' && cursoS == 'S')
@@ -94,11 +92,13 @@ int main()
 
     while (idade > 0);
 
-    media = (float)somaIdade / contBSC;
-
     printf("Quantidade de brasileiros: %d\n", contB);
     printf("Quantidade de estrangeiros: %d\n", contE);
-    printf("A idade media dos brasileiros sem curso superior eh: %.2f\n", media);
+    if (contBSC > 0)
+    {
+        media = (float)somaIdade / contBSC;
+        printf("A idade media dos brasileiros sem curso superior eh: %.1f\n", media);
+    }
     printf("A menor idade de estrangeiros com curso superior eh: %d", menor);
 
     return 0;
