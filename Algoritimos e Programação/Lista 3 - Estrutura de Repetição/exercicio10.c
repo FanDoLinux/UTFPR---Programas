@@ -9,7 +9,7 @@ por zero*/
 int main()
 {
 
-    int intervaloS, intervaloI, i, j, divisores, cont = 0, soma = 0, contLinha = 0;
+    int intervaloS, intervaloI, i, j, divisores, cont = 0, soma = 0, contLinha = 0, troca;
     float media;
 
     do
@@ -31,6 +31,13 @@ int main()
             printf("Valor invalido!\n");
         }
     } while (intervaloS < 0);
+
+    if (intervaloI > intervaloS)
+    {
+        troca = intervaloI;
+        intervaloI = intervaloS;
+        intervaloS = troca;
+    }
 
     for (i = 2; i <= intervaloS; i++)
     {
