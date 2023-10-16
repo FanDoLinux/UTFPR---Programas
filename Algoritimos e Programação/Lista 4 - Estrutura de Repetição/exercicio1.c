@@ -6,13 +6,13 @@ todos os números com quatro algarismos que possuem a citada característica.*/
 int main()
 {
 
-    int i, p1, p2;
+    int i, v1, v2;
 
     for (i = 1000; i < 10000; i++)
     {
-        p1 = i / 100;
-        p2 = i % 100;
-        if ((p1 + p2) * (p1 + p2) == i)
+        v1 = i / 100;
+        v2 = i % 100;
+        if ((v1 + v2) * (v1 + v2) == i)
         {
             printf("%d\t", i);
         }
