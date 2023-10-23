@@ -26,14 +26,17 @@ int main()
             {
                 maior = num;
             }
-            if (menor > num && num != 0)
+            else if (menor > num && num != 0)
             {
                 menor = num;
             }
 
         } while (num != 0);
 
-        printf("Maior: %d\tmenor: %d\n", maior, menor);
+        if (maior != 0 && menor != 0)
+        {
+            printf("Maior: %d\tmenor: %d\n", maior, menor);
+        }
 
         divisores = 0;
         for (j = 1; j <= menor; j++)
@@ -43,13 +46,16 @@ int main()
                 divisores++;
             }
         }
-        if (divisores == 2)
+        if (menor != 0)
         {
-            printf("\n%d eh primo\n", menor);
-        }
-        else
-        {
-            printf("\n%d nao eh primo\n", menor);
+            if (divisores == 2)
+            {
+                printf("\n%d eh primo\n", menor);
+            }
+            else
+            {
+                printf("\n%d nao eh primo\n", menor);
+            }
         }
 
         soma = 0;
@@ -60,13 +66,16 @@ int main()
                 soma = soma + i;
             }
         }
-        if (maior == soma)
+        if (maior != 0)
         {
-            printf("\n%d eh perfeito", maior);
-        }
-        else
-        {
-            printf("\n%d nao eh perfeito", maior);
+            if (maior == soma)
+            {
+                printf("\n%d eh perfeito", maior);
+            }
+            else
+            {
+                printf("\n%d nao eh perfeito", maior);
+            }
         }
 
         do
@@ -81,7 +90,6 @@ int main()
                 printf("Opcao invalida!\n");
             }
         } while (opcao != 'S' && opcao != 'N');
-
     } while (opcao == 'S');
 
     return 0;
