@@ -20,7 +20,7 @@ int main()
 {
 
     char reset, opcao;
-    int num, contDiv, num2;
+    int num, contDiv, num2, i, retSoma;
 
     do
     {
@@ -50,6 +50,7 @@ int main()
                 scanf("%d", &num);
             } while (num < 0);
 
+            contDiv = 0;
             contDiv = contDivisores(num);
             printf("%d possui %d divisores\n", num, contDiv);
             break;
@@ -69,7 +70,16 @@ int main()
                 printf("Informe o limite superior: ");
                 scanf("%d", &num2);
             } while (num < 0);
-            mostrarDivQtdeSoma(num, num2);
+            contDiv = 0;
+            for (i = num; i <= num2; i++)
+            {
+                printf("%d - ", i);
+                mostraDivisores(i);
+                contDiv = contDivisores(i);
+                retSoma = divSoma(i);
+                printf("=> Qtde %d => Soma: %d\n", contDiv, retSoma);
+            }
+            break;
         }
 
         do

@@ -25,24 +25,16 @@ void mostraDivisores(int x)
     }
 }
 
-void mostrarDivQtdeSoma(int x, int y)
+int divSoma(int x)
 {
-    int i, j, cont, soma;
+    int i, soma = 0;
 
-    for (i = x; i <= y; i++)
+    for (i = 1; i <= x; i++)
     {
-        printf("%d - ", i);
-        cont = 0;
-        soma = 0;
-        for (j = 1; j <= i; j++)
+        if (x % i == 0)
         {
-            if (i % j == 0)
-            {
-                cont++;
-                printf("%d  ", j);
-                soma = soma + j;
-            }
+            soma = soma + i;
         }
-        printf("=> Qtde: %d =>  Soma: %d\n", cont, soma);
     }
+    return soma;
 }
