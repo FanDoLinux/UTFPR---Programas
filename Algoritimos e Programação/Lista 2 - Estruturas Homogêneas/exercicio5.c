@@ -15,7 +15,8 @@ somente os valores positivos do vetor A.*/
 int main()
 {
     char reset;
-    int tam = 100, limInf = 50, i, j;
+    int tam = 100, limInf = 50, i, j; // criei essa variavel com valor 50 pois meu antivirus dava problema se eu colocava o valor
+    // diretamente na função (não faço ideia o porque disso).
 
     do
     {
