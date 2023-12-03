@@ -7,6 +7,8 @@ Vetor gerado: 1 3 2 4 2 2*/
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 #include "string.h"
 #include "vetores.h"
 
