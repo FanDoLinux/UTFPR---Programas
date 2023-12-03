@@ -18,21 +18,18 @@ int main()
     do
     {
         tentativas = 0;
-        if (tentativas < 3)
+        do
         {
-            do
+            printf("Informe a senha: ");
+            fflush(stdin);
+            gets(senha);
+            tentativas++;
+            if (tentativas == 3)
             {
-                printf("Informe a senha: ");
-                fflush(stdin);
-                gets(senha);
-                tentativas++;
+                printf("Acesso negado!");
+            }
 
-            } while (senha != senhaArmazenada);
-        }
-        else
-        {
-            printf("Acesso negado!");
-        }
+        } while (senha != senhaArmazenada && tentativas != 3);
 
         if (senha == senhaArmazenada)
         {

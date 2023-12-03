@@ -197,3 +197,13 @@ void ordenarVetorInteiro(int vetor[], int tam)
         }
     }
 }
+
+void gerarVetorInteiroComFaixa(int vet[], int tam, int limInf, int limSup)
+{
+    int i;
+    srand(time(NULL));
+    for (i = 0; i < tam; i++)
+    {
+        vet[i] = (rand() % ((limSup - limInf) + 1)) + limInf;
+    }
+}
